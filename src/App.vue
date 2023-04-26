@@ -48,7 +48,7 @@ export default {
     </div>
     <!-- /.header_top -->
 
-    <div class="main_header bg-light">
+    <div class="main_header">
 
       <div class="container h-100">
         <nav class="h-100 d-flex justify-content-between">
@@ -82,7 +82,7 @@ export default {
   <main id="page_main">
     <section id="slider_sec">
       <div class="slider w-100">
-        <div class="image position-relative w-100">
+        <div class="image w-100">
           <img :src="'/src/assets/' + sliderImages[activeImg].imgSrc" alt="slider_img"
             :class="i == activeImg ? 'd-block' : 'd-none'" v-for="(img, i) in sliderImages[activeImg].imgSrc"
             class="img-fluid">
@@ -104,6 +104,7 @@ export default {
 #page_header {
 
   .header_top {
+
     height: 40px;
     background-color: #3d3d3d;
     color: #ffffff;
@@ -132,6 +133,7 @@ export default {
 
   .main_header {
     height: 100px;
+    background-color: #ffffff;
 
     nav {
       .menu {
@@ -175,6 +177,9 @@ export default {
 
 #slider_sec {
 
+  position: relative;
+  background-color: #f5f5f5;
+
   .image {
 
     img {
@@ -188,8 +193,8 @@ export default {
 
   .comands {
     background-image: linear-gradient(to right, #686868 0%, #353535 51%, #222222 100%);
-    left: 45%;
-    top: 135%;
+    left: 40%;
+    top: 85%;
 
     button {
       color: #dadada;
