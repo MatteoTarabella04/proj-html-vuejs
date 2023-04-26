@@ -1,5 +1,13 @@
 <script>
+import menuLinks from './assets/data/menuLinks'
 export default {
+
+  data() {
+    return {
+      menuLinks,
+      isActive: 0,
+    }
+  }
 
 }
 </script>
@@ -37,10 +45,26 @@ export default {
     </div>
     <!-- /.header_top -->
 
-    <div class="main_header">
-      <div class="container">
+    <div class="main_header bg-light">
 
+      <div class="container h-100">
+        <nav class="h-100 d-flex justify-content-between">
+
+          <div class="logo d-flex align-items-center h-100">
+            <a href="/">
+              <img src="./assets/img/cropped-Group-39-2x.png" alt="logo_group" height="45">
+            </a>
+          </div>
+          <div class="menu d-flex align-items-center h-100">
+            <ul class="list-unstyled d-flex align-items-center gap-3 ">
+              <li v-for="(link, i) in menuLinks" :class="isActive == i ? 'active' : ''" @click="isActive = i">
+                <a :href="link.href">{{ link.link.toUpperCase() }}</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
+
     </div>
     <!-- /.main_header -->
   </header>
@@ -74,6 +98,30 @@ export default {
         width: 20px;
         height: 20px;
       }
+    }
+
+  }
+
+  .main_header {
+    height: 100px;
+
+    nav {
+      .menu {
+        li {
+
+          a {
+            text-decoration: none;
+            color: #000000;
+          }
+
+          &.active {
+            a {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
     }
 
   }
