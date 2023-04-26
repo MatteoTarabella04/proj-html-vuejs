@@ -62,8 +62,12 @@ export default {
               </li>
             </ul>
           </div>
-          <div class="btn_sec h-100 d-flex align-items-center">
-            <button class="myBtn rounded-pill text-uppercase">purchase</button>
+          <div class="btn_sec h-100 d-flex align-items-center gap-3">
+            <button class="myBtn rounded-pill">purchase</button>
+            <button class="search btn m-0 rounded-circle">
+              <font-awesome-icon icon="fa-solid fa-magnifying-glass" class="icon" />
+            </button>
+
           </div>
         </nav>
       </div>
@@ -146,6 +150,22 @@ export default {
             text-decoration: none;
           }
         }
+
+        .search {
+
+          &:hover {
+            background-color: #9ccdee;
+
+            .icon {
+              color: #ffffff;
+            }
+          }
+
+          .icon {
+            color: #00d9a6;
+          }
+
+        }
       }
 
     }
@@ -153,25 +173,3 @@ export default {
   }
 }
 </style>
-
-
-         
-.btn-grad {
-  background-image: linear-gradient(to right, #AAFFA9 0%, #11FFBD  51%, #AAFFA9  100%);
-  margin: 10px;
-  padding: 15px 45px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;            
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
-}
-
-.btn-grad:hover {
-  background-position: right center; /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
-}
