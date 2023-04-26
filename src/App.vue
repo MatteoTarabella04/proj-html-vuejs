@@ -93,6 +93,7 @@ export default {
           <button :class="activeImg == 2 ? 'myBtn' : ''" class="rounded-pill btn" @click="activeImg = 2">03</button>
         </div>
       </div>
+      <!-- TODO : insert paragraph description  -->
     </section>
     <!-- /#slider_sec -->
   </main>
