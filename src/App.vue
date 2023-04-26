@@ -1,11 +1,14 @@
 <script>
 import menuLinks from './assets/data/menuLinks'
+import sliderImages from './assets/data/sliderImages'
 export default {
 
   data() {
     return {
       menuLinks,
+      sliderImages,
       isActive: 0,
+      activeImg: 1,
     }
   }
 
@@ -76,6 +79,24 @@ export default {
     <!-- /.main_header -->
   </header>
   <!-- /#page_header -->
+  <main id="page_main">
+    <section id="slider_sec">
+      <div class="slider w-100">
+        <div class="image position-relative w-100">
+          <img :src="'/src/assets/' + sliderImages[activeImg].imgSrc" alt="slider_img"
+            :class="i == activeImg ? 'd-block' : 'd-none'" v-for="(img, i) in sliderImages[activeImg].imgSrc"
+            class="img-fluid">
+        </div>
+        <div class="comands position-absolute py-1 bg-dark rounded-pill">
+          <button :class="activeImg == 0 ? 'myBtn' : ''" class="rounded-pill btn" @click="activeImg = 0">01</button>
+          <button :class="activeImg == 1 ? 'myBtn' : ''" class="rounded-pill btn" @click="activeImg = 1">02</button>
+          <button :class="activeImg == 2 ? 'myBtn' : ''" class="rounded-pill btn" @click="activeImg = 2">03</button>
+        </div>
+      </div>
+    </section>
+    <!-- /#slider_sec -->
+  </main>
+  <!-- /#page_main -->
 </template>
 
 
@@ -130,27 +151,6 @@ export default {
       }
 
       .btn_sec {
-        .myBtn {
-          background-image: linear-gradient(to right, #bdf574 0%, #00d9a6 51%, #0fdee6 100%);
-          margin: 10px;
-          padding: 15px 45px;
-          text-align: center;
-          text-transform: uppercase;
-          transition: 0.5s;
-          background-size: 200% auto;
-          color: #ffffff;
-          box-shadow: 4px 4px 20px 0px #9ccdee;
-          border-radius: 10px;
-          border: none;
-          display: block;
-
-          &:hover {
-            background-position: right center;
-            color: #ffffff;
-            text-decoration: none;
-          }
-        }
-
         .search {
 
           &:hover {
@@ -170,6 +170,61 @@ export default {
 
     }
 
+  }
+}
+
+#slider_sec {
+
+  .image {
+
+    img {
+      margin-left: auto;
+      width: 1200px;
+      height: 800px;
+      object-fit: none;
+      object-position: 80px -200px;
+    }
+  }
+
+  .comands {
+    background-image: linear-gradient(to right, #686868 0%, #353535 51%, #222222 100%);
+    left: 45%;
+    top: 135%;
+
+    button {
+      color: #dadada;
+      font-size: large;
+      font-weight: bold;
+
+    }
+
+    .myBtn {
+      padding: 0.5rem 1rem;
+      margin: 0px 5px;
+      box-shadow: none;
+
+    }
+  }
+
+
+}
+
+.myBtn {
+  background-image: linear-gradient(to right, #bdf574 0%, #00d9a6 51%, #0fdee6 100%);
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: #ffffff;
+  box-shadow: 4px 4px 20px 0px #9ccdee;
+  border: none;
+
+  &:hover {
+    background-position: right center;
+    color: #ffffff;
+    text-decoration: none;
   }
 }
 </style>
