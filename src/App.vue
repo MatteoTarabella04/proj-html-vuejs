@@ -56,11 +56,14 @@ export default {
             </a>
           </div>
           <div class="menu d-flex align-items-center h-100">
-            <ul class="list-unstyled d-flex align-items-center gap-3 ">
+            <ul class="list-unstyled d-flex align-items-center gap-3 m-0">
               <li v-for="(link, i) in menuLinks" :class="isActive == i ? 'active' : ''" @click="isActive = i">
                 <a :href="link.href">{{ link.link.toUpperCase() }}</a>
               </li>
             </ul>
+          </div>
+          <div class="btn_sec h-100 d-flex align-items-center">
+            <button class="myBtn rounded-pill text-uppercase">purchase</button>
           </div>
         </nav>
       </div>
@@ -122,8 +125,53 @@ export default {
         }
       }
 
+      .btn_sec {
+        .myBtn {
+          background-image: linear-gradient(to right, #bdf574 0%, #00d9a6 51%, #0fdee6 100%);
+          margin: 10px;
+          padding: 15px 45px;
+          text-align: center;
+          text-transform: uppercase;
+          transition: 0.5s;
+          background-size: 200% auto;
+          color: #ffffff;
+          box-shadow: 4px 4px 20px 0px #9ccdee;
+          border-radius: 10px;
+          border: none;
+          display: block;
+
+          &:hover {
+            background-position: right center;
+            color: #ffffff;
+            text-decoration: none;
+          }
+        }
+      }
+
     }
 
   }
 }
 </style>
+
+
+         
+.btn-grad {
+  background-image: linear-gradient(to right, #AAFFA9 0%, #11FFBD  51%, #AAFFA9  100%);
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
