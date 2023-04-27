@@ -2,6 +2,7 @@
 import AppHeader from './components/AppHeader.vue'
 import sliderImages from './assets/data/sliderImages'
 import yourWebsiteCards from './assets/data/yourWebsiteCards'
+import exaplesImages from './assets/data/exaplesImages'
 export default {
 
   components: { AppHeader, },
@@ -10,6 +11,7 @@ export default {
     return {
       sliderImages,
       yourWebsiteCards,
+      exaplesImages,
       activeImg: 1,
     }
   }
@@ -118,6 +120,50 @@ export default {
       </div>
     </section>
     <!-- /#learnMore -->
+    <section id="examples">
+      <div class="container">
+        <div class="intro_content d-flex">
+
+          <div class="right">
+            <h2>
+              Our recent <b>web design</b> & some exaple of past <b>projects</b>
+            </h2>
+            <div class="my_banner">
+              <div class="small_banner"></div>
+              <div class="large_banner"></div>
+            </div>
+          </div>
+          <div class="left">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe labore tenetur perferendis vel excepturi
+              laudantium blanditiis tempore. Libero quibusdam voluptatem enim nam adipisci quos? Eaque expedita velit
+              facilis magnam mollitia tempore animi eius obcaecati error quod quaerat, veniam harum at tenetur voluptate
+              praesentium. Sequi harum, deleniti debitis hic officia fugit?
+            </p>
+          </div>
+
+        </div>
+        <div class="row row-cols-4">
+          <div v-for="item in exaplesImages" class="col g-1 flex-shrink-1">
+            <div class="card">
+              <img :src="item.path" :alt="item.title" class="img-fluid">
+            </div>
+            <div class="card hidden">
+              <img :src="item.path" :alt="item.title" class="img-fluid">
+              <div class="card_content">
+                <h3>
+                  {{ item.title }}
+                </h3>
+                <h5>
+                  {{ item.category.toUpperCase() }}
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /#examples -->
   </main>
   <!-- /#page_main -->
 </template>
@@ -270,6 +316,7 @@ export default {
   padding-top: 10rem;
   height: 1000px;
   display: flex;
+  margin-bottom: 10rem;
 
   .bg_image {
     position: relative;
@@ -319,6 +366,80 @@ export default {
       margin: 3rem 0;
     }
   }
+
+}
+
+#examples {
+
+  .right {
+    width: 45%;
+
+    h2 {
+      font-size: 3.5rem;
+
+      b {
+        color: #00d9a6;
+      }
+    }
+  }
+
+  .left {
+    display: flex;
+    align-items: center;
+    width: 55%;
+  }
+
+
+
+  .col {
+
+    &:hover {
+      .card {
+        cursor: pointer;
+        display: none;
+        transform: scale(1.10);
+        box-shadow: 2px 2px 10px #f5f5f5;
+        z-index: 1000;
+      }
+
+      img {
+        opacity: 10%;
+      }
+
+      .hidden {
+        display: block;
+      }
+    }
+
+    .hidden {
+      background-image: linear-gradient(to right, #bdf574 0%, #00d9a6 51%, #0fdee6 100%);
+
+      position: relative;
+      display: none;
+
+      h3 {
+        text-transform: capitalize;
+      }
+
+      .card_content {
+        color: #ffffff;
+        padding: 2rem;
+        position: absolute;
+        top: 60%;
+      }
+    }
+
+    .card {
+      border: none;
+
+      img {
+        border-radius: 0.5rem;
+      }
+
+    }
+  }
+
+
 
 }
 </style>
