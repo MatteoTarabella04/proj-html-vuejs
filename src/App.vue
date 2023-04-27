@@ -90,7 +90,34 @@ export default {
         </div>
       </div>
     </section>
-    <!-- /#howWeDo -->
+    <!-- /#whatWeDo -->
+    <section id="learnMore">
+      <div class="bg_image">
+        <div class="bg_cover"></div>
+      </div>
+
+      <div class="container d-flex">
+        <div class="poster">
+          <img src="./assets/img/businesswoman-analysing-document-P8WSNMC-1024x820.jpg" alt="">
+        </div>
+        <div class="learn_desc">
+          <h2>
+            learn more about our <b>missions</b>
+          </h2>
+          <div class="my_banner">
+            <div class="small_banner"></div>
+            <div class="large_banner"></div>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus voluptas itaque ut explicabo totam vel
+            accusantium veniam! Architecto velit beatae, temporibus magnam, odio, asperiores esse cum earum quis fuga
+            iure.
+          </p>
+          <button class="myBtn rounded-pill">read more</button>
+        </div>
+      </div>
+    </section>
+    <!-- /#learnMore -->
   </main>
   <!-- /#page_main -->
 </template>
@@ -178,6 +205,8 @@ export default {
 
 #whatWeDo {
 
+  padding-bottom: 10rem;
+
   .text_desc {
     width: 40%;
     padding-top: 4rem;
@@ -234,5 +263,62 @@ export default {
       }
     }
   }
+}
+
+#learnMore {
+  background-color: #f5f5f5;
+  padding-top: 10rem;
+  height: 1000px;
+  display: flex;
+
+  .bg_image {
+    position: relative;
+
+    width: 750px;
+    height: 640px;
+    background-image: url('./assets/img/busy-architect-PYVKWM4-1024x872.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-top-right-radius: 3rem;
+
+    .bg_cover {
+      width: 750px;
+      height: 640px;
+      background-image: linear-gradient(to right, #bdf574 0%, #00d9a6 51%, #0fdee6 100%);
+      border-top-right-radius: 3rem;
+      filter: opacity(80%);
+    }
+  }
+
+  .poster {
+    position: absolute;
+    left: 235px;
+    top: 2480px;
+
+    img {
+      width: 750px;
+      border-radius: 2rem;
+    }
+  }
+
+  .learn_desc {
+    margin-left: auto;
+    margin-top: 5rem;
+    padding: 1rem;
+    width: 60%;
+
+    h2 {
+      font-size: 3rem;
+
+      b {
+        color: #00d9a6;
+      }
+    }
+
+    .myBtn {
+      margin: 3rem 0;
+    }
+  }
+
 }
 </style>
