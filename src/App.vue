@@ -220,6 +220,18 @@ export default {
       border-radius: 1.5rem;
       box-shadow: 3px 3px 15px 2px #e7e7e7;
       padding: 3rem;
+
+      &:hover {
+        cursor: pointer;
+        transition: 0.8s;
+        background-image: linear-gradient(to right, #bdf574 0%, #00d9a6 51%, #0fdee6 100%);
+        color: #ffffff;
+
+        img {
+          transition: 0.8s;
+          filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(200%) contrast(100%);
+        }
+      }
     }
   }
 }
