@@ -94,6 +94,30 @@ export default {
         </div>
       </div>
       <!-- TODO : insert paragraph description  -->
+      <div class="focus_paragraph position-absolute">
+        <h5 class="text-uppercase">17 years of experience</h5>
+        <h1>
+          focus on your <b>business</b>
+        </h1>
+        <div class="my_banner">
+          <div class="small_banner"></div>
+          <div class="large_banner"></div>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet necessitatibus ex quo pariatur consequatur
+          repellat deleniti, numquam inventore corrupti, provident sapiente illum quidem non suscipit quasi obcaecati at
+          quos! Aliquid, corrupti, doloremque quae, numquam repellat accusantium atque perferendis voluptate illum totam
+          incidunt quisquam quia neque nemo quas dolor excepturi asperiores.
+        </p>
+        <button class="myBtnSecondary rounded-pill">read more</button><br>
+        <span> <a href="#">facebook</a> </span>
+        <span> - </span>
+        <span> <a href="#">instagram</a> </span>
+        <span> - </span>
+        <span> <a href="#">youtube</a> </span>
+        <span> - </span>
+        <span> <a href="#">twitter</a> </span>
+      </div>
     </section>
     <!-- /#slider_sec -->
   </main>
@@ -102,6 +126,10 @@ export default {
 
 
 <style lang="scss" scoped>
+.container {
+  max-width: 1600px;
+}
+
 #page_header {
 
   .header_top {
@@ -186,16 +214,18 @@ export default {
     img {
       margin-left: auto;
       width: 1200px;
-      height: 800px;
+      height: 920px;
       object-fit: none;
       object-position: 80px -200px;
     }
   }
 
   .comands {
+    z-index: 100000;
+
     background-image: linear-gradient(to right, #686868 0%, #353535 51%, #222222 100%);
     left: 40%;
-    top: 85%;
+    top: 90%;
 
     button {
       color: #dadada;
@@ -209,6 +239,43 @@ export default {
       margin: 0px 5px;
       box-shadow: none;
 
+    }
+  }
+
+  .focus_paragraph {
+    width: 35%;
+    top: 20%;
+    left: 10%;
+
+    h5 {
+      color: #00d9a6;
+      font-size: 1.10rem;
+      letter-spacing: 4px;
+      word-spacing: 10px;
+    }
+
+    h1 {
+      text-transform: capitalize;
+      font-weight: 700;
+      font-size: 5rem;
+      word-spacing: 5px;
+
+      b {
+        color: #00d9a6;
+      }
+    }
+
+    span {
+      a {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #000000;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+      }
     }
   }
 
@@ -231,6 +298,46 @@ export default {
     background-position: right center;
     color: #ffffff;
     text-decoration: none;
+  }
+}
+
+.myBtnSecondary {
+  background-image: linear-gradient(to right, #686868 0%, #353535 51%, #222222 100%);
+  margin: 5rem 0;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: #ffffff;
+  border: none;
+
+  &:hover {
+    background-position: right center;
+    color: #ffffff;
+    text-decoration: none;
+  }
+}
+
+.my_banner {
+
+  display: flex;
+  gap: 0.5rem;
+
+  .small_banner {
+    padding: 0.2rem;
+    width: 10px;
+    border-radius: 2rem;
+    margin: 2rem 0;
+    background-image: linear-gradient(to right, #bdf574 0%, #00d9a6 51%, #0fdee6 100%);
+  }
+
+  .large_banner {
+    padding: 0.2rem;
+    width: 50px;
+    border-radius: 2rem;
+    margin: 2rem 0;
+    background-image: linear-gradient(to right, #bdf574 0%, #00d9a6 51%, #0fdee6 100%);
   }
 }
 </style>
