@@ -1,6 +1,7 @@
 <script>
 import AppHeader from './components/AppHeader.vue'
 import sliderImages from './assets/data/sliderImages'
+import yourWebsiteCards from './assets/data/yourWebsiteCards'
 export default {
 
   components: { AppHeader, },
@@ -8,6 +9,7 @@ export default {
   data() {
     return {
       sliderImages,
+      yourWebsiteCards,
       activeImg: 1,
     }
   }
@@ -16,6 +18,8 @@ export default {
 </script>
 <template>
   <AppHeader />
+  <!-- /AppHeader -->
+
   <main id="page_main">
     <section id="slider_sec">
       <div class="slider w-100">
@@ -57,6 +61,36 @@ export default {
       </div>
     </section>
     <!-- /#slider_sec -->
+    <section id="whatWeDo">
+      <div class="container d-flex">
+        <div class="text_desc">
+          <h2>
+            we are here to make your <b>website</b> look more <b>elegant</b> and stylish!
+          </h2>
+          <div class="my_banner">
+            <div class="small_banner"></div>
+            <div class="large_banner"></div>
+          </div>
+          <button class="myBtn rounded-pill">vew all</button>
+        </div>
+        <div class="cards">
+          <div class="row row-cols-2">
+            <div v-for="card in yourWebsiteCards" class="col">
+              <div class="card">
+                <img :src="card.icon" :alt="card.title">
+                <h3>
+                  {{ card.title }}
+                </h3>
+                <p>
+                  {{ card.content }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /#howWeDo -->
   </main>
   <!-- /#page_main -->
 </template>
@@ -64,6 +98,7 @@ export default {
 
 <style lang="scss" scoped>
 #slider_sec {
+  margin-bottom: 15rem;
 
   position: relative;
   background-color: #f5f5f5;
@@ -139,5 +174,53 @@ export default {
   }
 
 
+}
+
+#whatWeDo {
+
+  .text_desc {
+    width: 40%;
+    padding-top: 4rem;
+
+    h2 {
+      font-size: 4rem;
+      text-transform: capitalize;
+      line-height: 5rem;
+
+      b {
+        color: #00d9a6;
+      }
+    }
+
+  }
+
+
+  .cards {
+    width: 60%;
+
+    .col {
+      margin-bottom: 2rem;
+    }
+
+    .card {
+
+      img {
+        color: #00d9a6;
+        height: 5rem;
+        width: 5rem;
+        margin-bottom: 2rem;
+      }
+
+      h3 {
+        margin-bottom: 1rem;
+        text-transform: capitalize;
+      }
+
+      border: none;
+      border-radius: 1.5rem;
+      box-shadow: 3px 3px 15px 2px #e7e7e7;
+      padding: 3rem;
+    }
+  }
 }
 </style>
