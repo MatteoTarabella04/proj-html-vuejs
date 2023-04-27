@@ -1,7 +1,71 @@
 @use '/node_modules/bootstrap/scss/bootstrap.scss';
+@use '/src/assets/scss/partials/AppHeader';
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap');
 
 body {
    font-family: 'Nunito', sans-serif;
+}
+
+.container {
+   max-width: 1600px;
+}
+
+.myBtn {
+   background-image: linear-gradient(to right, #bdf574 0%, #00d9a6 51%, #0fdee6 100%);
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: #ffffff;
+   box-shadow: 4px 4px 20px 0px #9ccdee;
+   border: none;
+
+   &:hover {
+      background-position: right center;
+      color: #ffffff;
+      text-decoration: none;
+   }
+}
+
+.myBtnSecondary {
+   background-image: linear-gradient(to right, #686868 0%, #353535 51%, #222222 100%);
+   margin: 5rem 0;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: #ffffff;
+   border: none;
+
+   &:hover {
+      background-position: right center;
+      color: #ffffff;
+      text-decoration: none;
+   }
+}
+
+.my_banner {
+
+   display: flex;
+   gap: 0.5rem;
+
+   .small_banner {
+      padding: 0.2rem;
+      width: 10px;
+      border-radius: 2rem;
+      margin: 2rem 0;
+      background-image: linear-gradient(to right, #bdf574 0%, #00d9a6 51%, #0fdee6 100%);
+   }
+
+   .large_banner {
+      padding: 0.2rem;
+      width: 50px;
+      border-radius: 2rem;
+      margin: 2rem 0;
+      background-image: linear-gradient(to right, #bdf574 0%, #00d9a6 51%, #0fdee6 100%);
+   }
 }
