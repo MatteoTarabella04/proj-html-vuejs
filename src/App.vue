@@ -355,6 +355,28 @@ export default {
       </div>
     </section>
     <!-- /#support -->
+    <section id="client">
+      <div class="container d-flex flex-column align-items-center justify-content-center h-100">
+        <b>&#786; &#786;</b><br>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis commodi qui magnam, mollitia ipsa
+          reprehenderit! Quam voluptatibus asperiores commodi ipsa.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, consequatur?
+        </p>
+        <div class="avatar">
+          <img src="./assets/img/businesswoman-analysing-document-P8WSNMC-1024x820.jpg" alt="">
+        </div>
+        <div class="client_infos">
+          <h3>
+            lissa durbin
+          </h3>
+          <p>
+            client
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- /#client -->
   </main>
   <!-- /#page_main -->
 </template>
@@ -820,5 +842,65 @@ export default {
     }
 
   }
+}
+
+#client {
+  height: 750px;
+
+  background-image: linear-gradient(60deg, #242424ea, #3b3b3be5), url('./assets/img/four-businesspeople-in-a-boardroom-with-paperwork-PC4V8H4.jpg'), ;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+
+
+  b {
+    color: #00d9a6;
+    font-size: 10rem;
+  }
+
+  p {
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1rem 10rem;
+    font-style: italic;
+    font-weight: 100;
+  }
+
+  .avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 90px;
+    margin: 3rem 0;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+
+    img {
+      height: 90px;
+      width: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+  }
+
+  .client_infos {
+    text-align: center;
+
+    h3 {
+      color: #00d9a6;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-style: normal;
+      text-transform: capitalize;
+      font-weight: 400;
+    }
+  }
+
 }
 </style>
