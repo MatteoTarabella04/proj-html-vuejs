@@ -161,6 +161,10 @@ export default {
             </div>
           </div>
         </div>
+        <div class="btn_sec w-100 d-flex justify-content-center">
+          <button class="myBtn rounded-pill">read more</button>
+
+        </div>
       </div>
     </section>
     <!-- /#examples -->
@@ -439,6 +443,9 @@ export default {
     }
   }
 
+  .myBtn {
+    margin: 5.5rem 0;
+  }
 
 
 }
