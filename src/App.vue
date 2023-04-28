@@ -377,6 +377,80 @@ export default {
       </div>
     </section>
     <!-- /#client -->
+    <section id="news">
+      <div class="container">
+        <div class="title">
+          <h2>
+            latest news & our <b>blog</b>
+          </h2>
+        </div>
+        <div class="my_banner">
+          <div class="small_banner"></div>
+          <div class="large_banner"></div>
+        </div>
+
+        <div class="row row-cols-3">
+          <div class="col">
+            <div class="card">
+              <img src="./assets/img/serious-businesswoman-with-documents-talking-on-P9Q6LX6-1024.jpg" alt=""
+                class="img-fluid">
+              <div class="news_banner">
+                <p>May 24, 2018 ●by Alex</p>
+                <ul>
+                  <li>
+                    <span>
+                      <h3>
+                        Marketing ideas
+                      </h3>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="./assets/img/Businessman-at-the-desk-in-his-office-resting--1024x768.jpg" alt=""
+                class="img-fluid">
+              <div class="news_banner">
+                <p>May 24, 2018 ●by Alex</p>
+                <ul>
+                  <li>
+                    <span>
+                      <h3>
+                        rest during working hours
+                      </h3>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="./assets/img/simple-home-office-with-tree-PBXRXYB-large-1024x768.jpg" alt="" class="img-fluid">
+              <div class="news_banner">
+                <p>May 24, 2018 ●by Alex</p>
+                <ul>
+                  <li>
+                    <span>
+                      <h3>
+                        develop yours startup ideas
+                      </h3>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="button d-flex justify-content-center">
+          <button class="myBtnSecondary rounded-pill">vew all posts</button>
+        </div>
+      </div>
+    </section>
+    <!-- /#news -->
   </main>
   <!-- /#page_main -->
 </template>
@@ -900,6 +974,85 @@ export default {
       text-transform: capitalize;
       font-weight: 400;
     }
+  }
+
+}
+
+#news {
+
+  background-color: #f5f5f5;
+
+  height: 980px;
+
+  .title {
+    padding: 8rem 0 0 0;
+    text-align: center;
+
+    h2 {
+      font-size: 4rem;
+      text-transform: capitalize;
+
+      b {
+        color: #00d9a6;
+      }
+    }
+  }
+
+  .my_banner {
+    justify-content: center;
+  }
+
+  .card {
+    position: relative;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 15px 5px #dadada;
+
+    img {
+      border-radius: 1rem;
+    }
+  }
+
+  .news_banner {
+    position: absolute;
+    top: 80%;
+    left: 6%;
+    height: 110px;
+    width: 450px;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    text-transform: capitalize;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h3 {
+      margin: 0;
+    }
+
+    p {
+      font-size: 0.89rem;
+      margin-left: 2rem;
+      margin-bottom: 0;
+      color: #686868;
+    }
+
+    li {
+      color: #00d9a6;
+      font-weight: bold;
+      font-size: 1.5rem;
+
+      span {
+        color: #000000;
+      }
+    }
+
+  }
+
+  .button {
+    margin-top: 5rem;
   }
 
 }
