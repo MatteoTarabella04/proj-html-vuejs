@@ -228,6 +228,133 @@ export default {
       </div>
     </section>
     <!-- /#stats -->
+    <section id="support">
+      <div class="container d-flex flex-wrap gap-5">
+        <div class="description">
+          <h2>
+            with <b>live chat 24/7</b> support
+          </h2>
+          <div class="my_banner">
+            <div class="small_banner"></div>
+            <div class="large_banner"></div>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, alias! Consequuntur sit adipisci odio,
+            magnam autem minus cum exercitationem, qui reiciendis commodi cumque officia dolore perferendis nam animi,
+            doloremque laborum?
+          </p>
+        </div>
+        <div class="card">
+          <div class="title">
+            <h3>
+              designing
+            </h3>
+            <p>
+              all designs
+            </p>
+          </div>
+          <div class="price">
+            <p>
+            <h2>$</h2>
+            <h3>13</h3>
+            <h2>/ design</h2>
+            </p>
+          </div>
+          <div class="body">
+            <ul class="list-unstyled">
+              <li>
+                <span>✔</span> creative design enabled
+              </li>
+              <li>
+                <span>✔</span> vibrant color usage
+              </li>
+              <li>
+                <span>✔</span> eye catching design
+              </li>
+              <li>
+                <span>✔</span> extreme typography
+              </li>
+              <li>
+                <span>✔</span> exceptional design
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="title">
+            <h3>
+              designing
+            </h3>
+            <p>
+              all designs
+            </p>
+          </div>
+          <div class="price">
+            <p>
+            <h2>$</h2>
+            <h3>13</h3>
+            <h2>/ design</h2>
+            </p>
+          </div>
+          <div class="body">
+            <ul class="list-unstyled">
+              <li>
+                <span>✔</span> creative design enabled
+              </li>
+              <li>
+                <span>✔</span> vibrant color usage
+              </li>
+              <li>
+                <span>✔</span> eye catching design
+              </li>
+              <li>
+                <span>✔</span> extreme typography
+              </li>
+              <li>
+                <span>✔</span> exceptional design
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="title">
+            <h3>
+              designing
+            </h3>
+            <p>
+              all designs
+            </p>
+          </div>
+          <div class="price">
+            <p>
+            <h2>$</h2>
+            <h3>13</h3>
+            <h2>/ design</h2>
+            </p>
+          </div>
+          <div class="body">
+            <ul class="list-unstyled">
+              <li>
+                <span>✔</span> creative design enabled
+              </li>
+              <li>
+                <span>✔</span> vibrant color usage
+              </li>
+              <li>
+                <span>✔</span> eye catching design
+              </li>
+              <li>
+                <span>✔</span> extreme typography
+              </li>
+              <li>
+                <span>✔</span> exceptional design
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /#support -->
   </main>
   <!-- /#page_main -->
 </template>
@@ -512,6 +639,11 @@ export default {
 
 #stats {
 
+  height: 1200px;
+  padding-top: 7rem;
+  padding-bottom: 15rem;
+  background-color: #f5f5f5;
+
   .card {
     width: 900px;
     height: 700px;
@@ -589,6 +721,104 @@ export default {
         color: #00d9a6;
       }
     }
+  }
+}
+
+#support {
+
+  padding: 5rem 0;
+
+  background-color: #f5f5f5;
+
+  .description {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 25%;
+
+    h2 {
+      font-size: 3.5rem;
+      text-transform: capitalize;
+
+      b {
+        color: #00d9a6;
+      }
+    }
+  }
+
+  .card {
+
+    cursor: pointer;
+
+    width: 340px;
+    height: 600px;
+    border: none;
+    border-radius: 1.5rem;
+    margin: 2rem 0;
+    box-shadow: 10px 2px 25px 5px #dadada;
+
+    background-image: linear-gradient(to right, #bdf574 0%, #00d9a6 51%, #0fdee6 100%);
+
+    &:nth-child(even) {
+      background-image: linear-gradient(to right, #686868 0%, #353535 51%, #222222 100%);
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    .title {
+      text-align: center;
+      margin-top: 1.4rem;
+      background-color: #ffffff;
+      padding: 1rem;
+
+      h3 {
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      p {
+        color: #686868;
+        text-transform: capitalize;
+      }
+    }
+
+    .price {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      color: #ffffff;
+
+      h2 {
+        font-size: 2rem;
+        text-transform: capitalize;
+      }
+
+      h3 {
+        font-size: 4rem;
+      }
+    }
+
+    .body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background-color: #ffffff;
+      height: 100%;
+      border-bottom-right-radius: 1.5rem;
+      border-bottom-left-radius: 1.5rem;
+
+      li {
+        margin: 0.7rem 0;
+      }
+    }
+
   }
 }
 </style>
