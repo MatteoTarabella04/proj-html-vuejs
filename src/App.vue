@@ -495,6 +495,62 @@ export default {
     </section>
   </main>
   <!-- /#page_main -->
+  <footer id="page_footer">
+    <div class="top">
+      <div class="container">
+        <div class="row row-cols-4">
+          <div class="col">
+            <img src="./assets/img/cropped-Group-39-2x.png" alt="">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos accusamus dolorum sapiente. Assumenda
+              distinctio, quae, aliquam repellat minima eveniet voluptatibus velit exercitationem quod architecto sed
+              ullam, vitae nobis nostrum consectetur?
+            </p>
+          </div>
+          <div class="col">
+            <h3>
+              quick links
+            </h3>
+            <div class="my_banner m-0 ms-4 mb-4">
+              <div class="small_banner m-0"></div>
+              <div class="large_banner m-0"></div>
+            </div>
+            <ul class="list-unstyled">
+              <li><a href="#">career</a></li>
+              <li><a href="#">career</a></li>
+              <li><a href="#">career</a></li>
+              <li><a href="#">career</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>
+              contact
+            </h3>
+            <div class="my_banner m-0 ms-4 mb-4">
+              <div class="small_banner m-0"></div>
+              <div class="large_banner m-0"></div>
+            </div>
+            <ul class="list-unstyled contacts">
+              <li><a href="#">Patricia C. Amedee 4401, TX 76051</a></li>
+              <li><a href="#">info@yourdomain.com</a></li>
+              <li><a href="#">+99 (0) 101 1000 288</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>
+              location on map
+            </h3>
+            <div class="my_banner m-0 ms-4 mb-4">
+              <div class="small_banner m-0"></div>
+              <div class="large_banner m-0"></div>
+            </div>
+            <img src="./assets/img/map.png" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- /#page_footer -->
 </template>
 
 
@@ -1173,6 +1229,45 @@ export default {
     align-items: center;
     justify-content: space-between;
     padding: 5rem 2rem;
+  }
+}
+
+footer {
+  .top {
+    padding: 8rem 0;
+
+    img {
+      padding: 2rem 0;
+    }
+
+    h3 {
+      padding: 2rem;
+      text-transform: uppercase;
+    }
+
+    ul {
+      margin-left: 2rem;
+
+      li {
+        a {
+          text-decoration: none;
+          color: #000000;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .contacts {
+
+      li {
+
+        margin-bottom: 2rem;
+      }
+    }
+
   }
 }
 </style>
