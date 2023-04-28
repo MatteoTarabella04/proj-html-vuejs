@@ -168,6 +168,66 @@ export default {
       </div>
     </section>
     <!-- /#examples -->
+    <section id="stats">
+      <div class="container position-relative">
+        <div class="card myCard d-flex alig align-items-center justify-content-center">
+          <div class="content">
+            <h2>
+              280
+            </h2>
+            <p>
+              projects
+            </p>
+            <div class="statistics d-flex justify-content-between align-items-center">
+              <div class="left">
+                <h3>
+                  +3,500
+                </h3>
+                <p>
+                  users' comments
+                </p>
+              </div>
+              <div class="bord_banner"></div>
+              <div class="right">
+                <h3>
+                  100%
+                </h3>
+                <p>
+                  happy clients
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card myCard_2 position-absolute">
+          <h2>
+            we <b>love</b> what we do
+          </h2>
+          <div class="my_banner">
+            <div class="small_banner"></div>
+            <div class="large_banner"></div>
+          </div>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati nesciunt aperiam tempore, error, a vero
+            voluptatem dolorem, deserunt sed magnam aut cum at suscipit? Quam vitae asperiores vel ad nulla distinctio,
+            expedita animi a iure, officia magni neque corporis recusandae! Ab consequuntur necessitatibus molestiae
+            cupiditate.
+          </p>
+          <ul class="list-unstyled">
+            <li>
+              <span>✔</span> Lorem ipsum dolor sit amet.
+            </li>
+            <li>
+              <span>✔</span> Lorem ipsum, dolor sit amet consectetur adipisicing.
+            </li>
+            <li>
+              <span>✔</span> Lorem ipsum dolor sit.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- /#stats -->
   </main>
   <!-- /#page_main -->
 </template>
@@ -448,5 +508,87 @@ export default {
   }
 
 
+}
+
+#stats {
+
+  .card {
+    width: 900px;
+    height: 700px;
+    border: none;
+    border-radius: 1rem;
+  }
+
+  .myCard {
+    margin: 5rem 0;
+
+    background-image: linear-gradient(to right, #bdf574e1 0%, #00d9a6e0 51%, #0fdfe6e0 100%), url('./assets/img/person-with-long-curly-hair-PZ99QM2-2x.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+    .content {
+      color: #ffffff;
+      text-transform: uppercase;
+      text-align: center;
+
+      h2 {
+        font-size: 8rem;
+      }
+
+      h3 {
+        font-size: 3rem;
+        font-weight: lighter;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+
+      .left {
+        padding: 1rem 2rem;
+        max-width: 100%;
+      }
+
+      .right {
+        padding: 1rem 2rem;
+        max-width: 100%;
+      }
+
+      .bord_banner {
+        height: 65px;
+        border: 0.5px solid #ffffff;
+      }
+    }
+
+  }
+
+  .myCard_2 {
+    top: 10%;
+    left: 45%;
+
+    padding: 10rem 8rem;
+    box-shadow: 10px 2px 25px 5px #dadada;
+
+    h2 {
+      font-size: 3rem;
+      margin-right: 15rem;
+      text-transform: capitalize;
+
+      b {
+        color: #00d9a6;
+      }
+    }
+
+    li {
+      margin: 0.8rem 0;
+
+      span {
+        margin-right: 0.3rem;
+        color: #00d9a6;
+      }
+    }
+  }
 }
 </style>
