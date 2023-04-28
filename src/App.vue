@@ -3,6 +3,7 @@ import AppHeader from './components/AppHeader.vue'
 import sliderImages from './assets/data/sliderImages'
 import yourWebsiteCards from './assets/data/yourWebsiteCards'
 import exaplesImages from './assets/data/exaplesImages'
+import sponsor from './assets/data/sponsor'
 export default {
 
   components: { AppHeader, },
@@ -12,6 +13,7 @@ export default {
       sliderImages,
       yourWebsiteCards,
       exaplesImages,
+      sponsor,
       activeImg: 1,
     }
   }
@@ -484,6 +486,13 @@ export default {
       </div>
     </section>
     <!-- /#start -->
+    <section id="sponsor">
+      <div class="container">
+        <div class="sponsor_elements">
+          <img v-for="path in sponsor" :src="path.path" alt="sponsor_img">
+        </div>
+      </div>
+    </section>
   </main>
   <!-- /#page_main -->
 </template>
@@ -1152,6 +1161,18 @@ export default {
         margin-bottom: 0;
       }
     }
+  }
+}
+
+#sponsor {
+  background-color: #f5f5f5;
+
+  .sponsor_elements {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 2rem;
   }
 }
 </style>
