@@ -451,6 +451,39 @@ export default {
       </div>
     </section>
     <!-- /#news -->
+    <section id="start">
+      <div class="container">
+        <div class="row row-cols-2">
+          <div class="col">
+            <div class="card">
+              <p>
+                are you ready?
+              </p>
+              <h2>
+                start a new project
+              </h2>
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Enter Your Email Address"
+                  aria-label="Enter Your Email Address" aria-describedby="submit">
+                <button class="btn text-uppercase" type="submit" id="submit">submit</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <p>
+                what are you wating for?
+              </p>
+              <h2>
+                let's talk about work
+              </h2>
+              <button class="myBtnSecondary rounded-pill">start now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /#start -->
   </main>
   <!-- /#page_main -->
 </template>
@@ -1055,5 +1088,70 @@ export default {
     margin-top: 5rem;
   }
 
+}
+
+#start {
+
+  background-color: #f5f5f5;
+
+  .card {
+    min-height: 100%;
+
+    border: none;
+    border-radius: 1rem;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, #686868 0%, #353535 51%, #222222 100%);
+
+    p {
+      color: #f5f5f5;
+      text-transform: capitalize;
+    }
+
+    h2 {
+      color: #ffffff;
+      text-transform: capitalize;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    .input-group {
+      width: 60%;
+      margin-top: 4rem;
+
+      input {
+        background-color: #3a3a3a;
+        border: none;
+        border-top-left-radius: 2rem;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem;
+
+      }
+
+      button {
+        color: #686868;
+        font-weight: bold;
+        padding: 0 1.5rem;
+        background-color: #3a3a3a;
+        border-top-right-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+      }
+    }
+
+  }
+
+  .col:last-child {
+    .card {
+      background-image: linear-gradient(to right, #bdf574 0%, #00d9a6 51%, #0fdee6 100%);
+
+      .myBtnSecondary {
+        margin-top: 2.5rem;
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 </style>
